@@ -1,6 +1,9 @@
+
+
 const input = document.getElementById('input')
 const ul = document.getElementById('list')
 const addButton = document.getElementById('add')
+
 
 
 
@@ -40,7 +43,6 @@ deleteButton.id = 'delete'
 deleteButton.type = 'button'
 
 
-const storedData =+ localStorage.setItem('todoList',input.value)
 
 
 

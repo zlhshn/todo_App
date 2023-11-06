@@ -144,16 +144,16 @@ cursor: pointer;
 }
 
 @media screen and (max-width:410px) {
+
     
     #input{
 
-        width: 80%;
         padding: .7rem;
     }
 
     #add{
-        width: 60px;
-        padding: 0;
+    
+        padding: .5rem;
     }
 
 }
