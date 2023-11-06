@@ -5,6 +5,7 @@ const addButton = document.getElementById('add');
 // Sayfa yüklendiğinde "localStorage" içeriğini al ve görevleri göster
 window.addEventListener('load', () => {
     const storedData = localStorage.getItem('todoList');
+    // console.log(storedData);
     if (storedData) {
         const todoList = JSON.parse(storedData);
         todoList.forEach(task => {
@@ -102,6 +103,7 @@ function removeTask(task) {
         }
     }
 }
+
 
 
 
