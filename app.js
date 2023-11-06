@@ -6,9 +6,6 @@ const addButton = document.getElementById('add')
 
 
 
-
-
-
 addButton.addEventListener('click',()=>{
 
 
@@ -59,9 +56,11 @@ deleteButton.addEventListener('click',()=>{
 li.addEventListener('click', () => {
 
     
-    p.classList.add('pchecked');
-    todo.classList.add('line');
+    p.classList.toggle('pchecked');
+    todo.classList.toggle('line');
 });
+
+
 
 }
 
@@ -71,7 +70,4 @@ li.addEventListener('click', () => {
 
 
 
-newToDo.addEventListener('submit',(event)=>{
 
-
-})

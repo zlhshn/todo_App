@@ -42,6 +42,7 @@ h3{
     display: flex;
     justify-content: space-between;
     border-radius: 40px;
+    margin-bottom: 2rem;
 
 }
 
@@ -69,76 +70,61 @@ font-size: .9rem;
 }
 
 
+ul{
+    position: relative;
+}
 
-/* !li elemanı check edilmeden önceki style özellikleri */
+/* ! todo lar eklendikten sonra oluşacak elementlerin styları */
 
+.li-class{
 
-.li{
-
-list-style: none;
-line-height: 2.4rem;
+list-style-type: none;
 display: flex;
 align-items: center;
-padding: 0rem;
-position: relative;
-font-size: 18px;
-cursor: pointer;
+padding: .5rem  0rem;
 }
 
 
-.p{
-display: inline-block;    
-width: 20px;
-height: 20px;
-border: 1px solid rgb(122, 120, 120);
+/* li::before{
+
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 1px solid gray;
+    border-radius: 50%;
+} */
+
+
+.p-class{
+    display: inline-block;
+    margin-left: 1.5rem;
+}
+
+.delete{
+position: absolute;
+right: .5rem;
+border: none;
+outline: none;
+padding: .3rem;
+width: 30px;
+height: 30px;
 border-radius: 50%;
-margin-right: 1rem;
+background-color: white;
 cursor: pointer;
+font-weight: bold;
+color: rgb(228, 20, 20);
+font-size: 1.1rem;
+
 }
 
+.delete:hover{
+ background-color: rgb(236, 236, 236);
 
-.sil{
-    position: absolute;
-    right: 0;
-    padding: 0.1rem  .3rem;
-    margin-right: .1rem;
-    border: none;
-    background-color: white;
-    font-size: 18px;
-    cursor: pointer;
-    width: 30px;
-    height: 37px;
-    }
-
-
-
-
-/* ? li elemanı check ediltikten sonraki eklenecek  style özellikleri */
-
-.pchecked:first-child{
-    background-color: #FF7A48;
-    text-decoration: none;
-    content: url(./img/ok3.jpg);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
 }
 
+/* 
+li{
 
-
-.line{
     text-decoration: line-through;
-    color: rgb(109, 107, 107);
-}
-
-
-
-
-
-@media screen and (max-width:550px) {
-    .container{
-       width: 83vw;
-    }
-}
+    color: rgb(177, 173, 173);
+} */
