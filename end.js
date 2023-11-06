@@ -3,9 +3,18 @@ const ul = document.getElementById('list')
 const addButton = document.getElementById('add')
 
 
-window.addEventListener('load',()=>{
+window.addEventListener('load',(e)=>{
 
     ul.innerHTML = localStorage.getItem('todos')
+
+
+    
+    // const b =document.querySelectorAll('.pchecked').length
+    // console.log(b);
+    // const a =document.querySelectorAll('.sil').length
+
+    // document.querySelector('.completed').textContent = `${b} out of ${a} task completed`
+
 })
 
 
@@ -44,6 +53,7 @@ function addTask(){
     
     input.value =''
     saveData()
+  
 
 }}
 
@@ -53,6 +63,7 @@ function addTask(){
 addButton.addEventListener('click',()=>{
 
     addTask()
+    
 })
 
 
@@ -62,28 +73,33 @@ addButton.addEventListener('click',()=>{
 ul.addEventListener('click',(e)=>{
     console.log(e.target);
     saveData()
+  
 
 if(e.target.classList.contains('li')) {
 
     console.log(e.target.querySelector('.p').classList.toggle('pchecked'));
     e.target.querySelector('span').classList.toggle('line')
     saveData()
+   
 
 }else if(e.target.classList.contains('sil')){
     e.target.parentElement.remove()
     saveData()
+   
 
 }else if(e.target.classList.contains('p')){
 
     e.target.classList.toggle('pchecked')
     e.target.nextElementSibling.classList.toggle('line')
     saveData()
+  
 
 } else if(e.target.classList.contains('span')){
 
     e.target.classList.toggle('line')
     e.target.previousElementSibling.classList.toggle('pchecked')
     saveData()
+   
 }
 
 })
@@ -95,3 +111,10 @@ function saveData(){
 console.log(localStorage.setItem('todos',ul.innerHTML));
 
 }
+
+
+// function taskIsCompleted(){
+
+//    document.getElementById('completed').textContent =  `${completedTask} OUT OF${totalTask} TASK COMPLETED `
+// }
+
