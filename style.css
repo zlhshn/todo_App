@@ -1,4 +1,3 @@
-
 *{
     box-sizing: border-box;
     margin: 0;
@@ -29,7 +28,6 @@ body{
 h2{
     margin: auto;
     font-family: cursive;
-    /* font-weight: 900; */
 }
 
 h3{
@@ -42,7 +40,6 @@ h3{
     display: flex;
     justify-content: space-between;
     border-radius: 40px;
-
 }
 
 
@@ -70,8 +67,8 @@ font-size: .9rem;
 
 
 
-/* !li elemanı check edilmeden önceki style özellikleri */
 
+/* ! yeni todo eklenirken oluşan elemanların style özellikleri */
 
 .li{
 
@@ -108,12 +105,36 @@ cursor: pointer;
     cursor: pointer;
     width: 30px;
     height: 37px;
+    color: red;
     }
 
 
+    /* .completed{
+
+        color: white;
+        text-align: center;
+        margin-top: 2rem;
+        padding: .5rem;
+        border-radius: 10px;
+        font-weight: bold;
+        animation:completedText 1s linear alternate;
+        background-color: rgb(182, 39, 14);
+    }
 
 
-/* ? li elemanı check ediltikten sonraki eklenecek  style özellikleri */
+    @keyframes completedText {
+        
+        0% {
+            transform: rotateX(180deg);
+        }
+
+        100%{
+            transform: rotateX(360deg);
+        }
+    } */
+
+
+/* ! todo elemanı check ediltikten sonraki eklenecek  style özellikleri */
 
 .pchecked:first-child{
     background-color: #FF7A48;
@@ -128,13 +149,15 @@ cursor: pointer;
 
 
 
-.line{
+.span-checked{
     text-decoration: line-through;
     color: rgb(109, 107, 107);
 }
 
 
 
+
+/* !responsive  */
 
 
 @media screen and (max-width:550px) {
