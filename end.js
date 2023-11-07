@@ -118,3 +118,12 @@ console.log(localStorage.setItem('todos',ul.innerHTML));
 //    document.getElementById('completed').textContent =  `${completedTask} OUT OF${totalTask} TASK COMPLETED `
 // }
 
+
+
+
+
+// ! Güncel day almak için
+
+day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+document.getElementById('day').textContent = day[new Date().getDay()]
