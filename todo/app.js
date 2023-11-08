@@ -6,11 +6,12 @@ const addButton = document.getElementById('add')
 
 
 // ! sayfa yüklenirken todoların en son halinin gelmesi
+
 window.addEventListener('load',()=>{
    
     ul.innerHTML = localStorage.getItem('todos')
-    // updateCompletedTaskCount();
-   
+    taskCount()
+    saveData()
 })
 
 
@@ -47,8 +48,9 @@ function addTask(){
     deleteButton.type = 'button'
     
     input.value =''
+
+    taskCount()
     saveData()
-    // updateCompletedTaskCount();
     
 }
 
@@ -62,8 +64,8 @@ addButton.addEventListener('click',()=>{
     }else{
 
     addTask()
-    // updateCompletedTaskCount();
-  
+    saveData()
+    taskCount()
 } 
 })
 
@@ -92,9 +94,8 @@ if(e.target.classList.contains('li')) {
     e.target.previousElementSibling.classList.toggle('pchecked')
     
 }
-
 saveData()
-updateCompletedTaskCount();
+taskCount()
 
 })
 
@@ -105,7 +106,9 @@ updateCompletedTaskCount();
 
 function saveData(){
 
+
 localStorage.setItem('todos',ul.innerHTML);
+
 
 
 }
@@ -120,20 +123,26 @@ document.getElementById('day').textContent = day[new Date().getDay()]
 
 
 
-// function updateCompletedTaskCount() {
+
+
+function taskCount() {
+    const li = document.querySelector('li')
+    const totalTask = document.querySelectorAll('.li').length;
+    const completedTask = document.querySelectorAll('.pchecked').length;
    
-//     const totalTask = document.querySelectorAll('.li').length;
-//     const completedTask = document.querySelectorAll('.pchecked').length;
-   
-//     const taskCountElement = document.querySelector('.completed');
+    const result = document.querySelector('.result');
 
-//     if (totalTask.length =0){
-//         taskCountElement.classList.toogle('completed')
+   if(ul.textContent){
+    result.textContent = `${completedTask} OUT OF  ${totalTask} TASK COMPLETED`;
+    result.classList.add('result-task')
+    
 
-//     } else if(taskCountElement) {
-//         taskCountElement.textContent = `${completedTask} OUT OF  ${totalTask} TASK COMPLETED`;
-//         taskCountElement.classList.toogle('completed')
+   }else if(!ul.textContent){
 
-// // Bu işlevi çağırarak başlangıçta güncel task sayısını görüntüleyebilirsiniz.
+    result.style.display ='none' 
+     
+   }
 
-// }}
+}
+
+

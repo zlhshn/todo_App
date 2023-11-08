@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #3348c0;
+    background-image: linear-gradient(90deg, #17204d 15%, #47b1cf 100%);
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+}
+
+.container{
+
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+h2{
+    margin: auto;
+    font-family: cursive;
+}
+
+
+h3{
+
+    color: red;
+}
+
+.container-2{
+
+    background-color: rgb(231, 229, 229);
+    border-radius: 40px;
+
+
+}
+
+#input{
+border: none;
+background-color:inherit;
+padding: .7rem 1.3rem;
+border-radius: 40px;
+outline: none;
+caret-color:coral
+
+}
+
+#add{
+
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    padding: .7rem 1.3rem;
+    width: 90px;
+    color: white;
+    background-color: orange;
+    cursor: pointer;
+    font-weight: bold;
+    
+
+
+}
+
+/* ! todolar oluştuktan sonra elementlere verilecek stylar  */
+
+.circle{
+
+    border: 1px solid red;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(202, 198, 198);
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 1rem;
+
+}
+
+
+.li{
+
+    list-style: none;
+    background-origin: padding-box;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    position:relative ;
+    padding: .7rem 0rem;
+
+}
+
+
+.task{
+ cursor: pointer;
+}
+
+
+.sil{
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    color: red;
+    font-size: 1.3rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+
+
+.result-task {
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-weight: bold;
+    animation: completedText 1s linear alternate;
+    background-color: rgb(182, 39, 14);
+  }
+  
+  @keyframes completedText {
+    0% {
+      transform: rotateX(180deg);
+    }
+  
+    100% {
+      transform: rotateX(360deg);
+    }
+  }
+
+/* ! todo elemanı check ediltikten sonraki eklenecek  style özellikleri */
+
+.pchecked:first-child {
+    background-color: #ff7a48;
+    text-decoration: none;
+    content: url(./ok3.jpg);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+  }
+  
+  
+  .span-checked {
+    text-decoration: line-through;
+    color: rgb(109, 107, 107);
+  }
