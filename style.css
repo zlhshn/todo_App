@@ -239,13 +239,14 @@ caret-color:coral
   #input{
 
      width: 50%;
-     padding-left: .3rem;
+    
     
     }
 
     #add{
 
-      width: 55px;
+      width: 50px;
+    padding-right: .2rem;
      
     }
 
