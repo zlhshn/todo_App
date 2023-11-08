@@ -186,6 +186,8 @@ caret-color:coral
   .container-2{
 
    display: flex;
+   justify-content: space-between;
+   text-align: center;
    
 }
 
@@ -230,6 +232,7 @@ caret-color:coral
 
   display: flex;
   justify-content: space-between;
+  text-align: center;
 
 }
 
@@ -242,7 +245,8 @@ caret-color:coral
 
     #add{
 
-      width: 30px;
+      width: 55px;
+     
     }
 
   }
