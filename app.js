@@ -65,7 +65,7 @@ input.value = ''
 
 //  ?  local storage e todoların depolanması
 localStorage.setItem('todo',ul.innerHTML)
-input.focus()
+
 taskcount()
 
 })

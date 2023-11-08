@@ -27,6 +27,8 @@ body{
     gap: 1.3rem;
     max-height: 90%;
     margin-top:6rem;
+    display: flex;
+    justify-content: space-between;
 
   
   
@@ -238,5 +240,9 @@ caret-color:coral
     
     }
 
+    #add{
+
+      width: 30px;
+    }
 
   }
