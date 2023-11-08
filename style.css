@@ -13,7 +13,7 @@ body{
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+    
 }
 
 .container{
@@ -25,6 +25,11 @@ body{
     display: flex;
     flex-direction: column;
     gap: 1.3rem;
+    max-height: 90%;
+    margin-top:6rem;
+
+  
+  
 }
 
 h2{
@@ -42,8 +47,7 @@ h3{
 
     background-color: rgb(231, 229, 229);
     border-radius: 40px;
-
-
+    height: 85%;
 }
 
 #input{
@@ -143,6 +147,7 @@ caret-color:coral
     }
   }
 
+
 /* ! todo elemanı check ediltikten sonraki eklenecek  style özellikleri */
 
 .pchecked:first-child {
@@ -160,4 +165,78 @@ caret-color:coral
   .span-checked {
     text-decoration: line-through;
     color: rgb(109, 107, 107);
+  }
+
+
+
+  /* !responsive */
+
+
+  @media screen and (max-width:430px){
+
+    .container{
+      margin: 3rem;
+      width: 310px;
+      height: 85%;
+      overflow: scroll;
+  }
+
+  .container-2{
+
+   display: flex;
+   
+}
+
+
+#input{
+  border: none;
+  padding: .7rem .4rem;
+  
+  }
+  
+  #add{
+    
+      padding: .3rem 1.3rem;
+      width: 70px;
+  }
+
+  }
+
+  @media screen and (max-width:380px){
+
+    .container{
+      width: 250px;
+      margin-top: 4rem;
+      overflow: scroll;
+      height: 80%;
+      padding: 1.3rem;
+  }
+
+
+  #input{
+    border: none;
+     width: 145px;
+    
+    }
+    
+  }
+
+  @media screen and (max-width:340px){
+
+ 
+.container-2{
+
+  display: flex;
+  justify-content: space-between;
+
+}
+
+  #input{
+
+     width: 50%;
+     padding-left: .3rem;
+    
+    }
+
+
   }

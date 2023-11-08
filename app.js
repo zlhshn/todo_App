@@ -4,12 +4,14 @@ const  day = document.querySelector('.day')
 const ul = document.querySelector('ul')
 
 
+// ! güncel gün almak için kod
+
 const dayName = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
 
 day.textContent = dayName[new Date().getDay()] 
 
 
-
+// ! sayfa yenilendiğinde todoların tekrar yüklenmesi için
 window.addEventListener('load',()=>{
 
     ul.innerHTML = localStorage.getItem('todo')
@@ -20,6 +22,7 @@ window.addEventListener('load',()=>{
 })
 
 
+// ! todoları  add butonu kullanarak eklemek için
 
 addButton.addEventListener('click',()=>{
     if(!input.value.trim()){
@@ -37,10 +40,13 @@ ul.appendChild(li)
 li.appendChild(p)
 li.appendChild(task)
 li.appendChild(deleteButton)
+
 // ? element içine textleri oluşturur
 
 const text = document.createTextNode(input.value)
 const x = document.createTextNode('X')
+
+// ? oluşan elemanlara class verilmesi
 
 p.classList.add('circle')
 li.classList.add('li')
@@ -48,24 +54,16 @@ task.classList.add('task')
 deleteButton.classList.add('sil')
 
 
+// ? elememtlere  textlerin bağlanması
 
 task.appendChild(text)
 deleteButton.appendChild(x)
 
 input.value = ''
-// task.textContent = input.value
-// deleteButton.textContent =  'x'
 
-// const arr = []
+ }
 
-//   if(arr.includes(input.value)){
-//       alert("Bu değer zaten girildi")
-//   }else {
-//       arr.push(input.value)
-//   }
-
-    }
-
+//  ?  local storage e todoların depolanması
 localStorage.setItem('todo',ul.innerHTML)
 input.focus()
 taskcount()
@@ -73,7 +71,7 @@ taskcount()
 })
 
 
-
+// ! bubling kullanarak ul taşıyıcısı üzerindeki elemanlara event verilmesi
 ul.addEventListener('click',(e)=>{
 
 
@@ -104,6 +102,7 @@ ul.addEventListener('click',(e)=>{
 })
 
 
+// ! en sona bilgi satırı yazılması
 
 function  taskcount(){
 
@@ -114,18 +113,12 @@ result.classList.add('result-task')
 result.textContent = ` ${doneTask}  OUT OF ${totalTask} TASK COMPLETED`
 
 
- 
-
-
 if(!totalTask){
 
     result.style.display = 'none';
 }else{
     result.style.display = 'block'
 }
-
-
-
 
 
 }
